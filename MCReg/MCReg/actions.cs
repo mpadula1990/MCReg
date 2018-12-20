@@ -26,6 +26,7 @@ namespace MCReg
             return db.GetCollection<usuarios>("usuarios").Find(p => p._id == _id).SingleOrDefault();
         }
 
+
         public int Login(string usuario, string pass)
         {
 
@@ -92,6 +93,12 @@ namespace MCReg
             {
                 return false;
             }
+        }
+
+        public pacientes Pacientepordoc(string doc)
+        {
+            var db = cliente.GetDatabase("MCReg");
+            return db.GetCollection<pacientes>("pacientes").Find(p => p.documento == doc).SingleOrDefault();
         }
     }
 }
