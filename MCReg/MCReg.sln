@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCReg", "MCReg\MCReg.csproj", "{04D2091F-9A9F-4253-B1B2-BC080ABAEDAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04D2091F-9A9F-4253-B1B2-BC080ABAEDAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D2091F-9A9F-4253-B1B2-BC080ABAEDAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D2091F-9A9F-4253-B1B2-BC080ABAEDAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D2091F-9A9F-4253-B1B2-BC080ABAEDAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {68FDC641-1D09-41E3-BBC1-E86061D42F72}
+	EndGlobalSection
+EndGlobal
