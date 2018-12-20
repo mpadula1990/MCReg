@@ -1,0 +1,15 @@
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MCReg.exe.config
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MCReg.exe
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MCReg.pdb
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.csprojAssemblyReference.cache
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.Properties.Resources.resources
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.csproj.GenerateResource.cache
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.csproj.CoreCompileInputs.cache
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.exe
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.pdb
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.frmlogin.resources
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.csproj.CopyComplete
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.frmapp.resources
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.frmInicio.resources
