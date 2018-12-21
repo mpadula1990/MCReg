@@ -90,5 +90,10 @@ namespace MCReg
         {
             abrirForm(new frmInicio());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            abrirForm(new frmnuevosocio());
+        }
     }
 }

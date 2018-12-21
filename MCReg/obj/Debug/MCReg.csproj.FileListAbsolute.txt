@@ -13,3 +13,14 @@ C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\Microsoft.VisualBasic.PowerP
 C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.csproj.CopyComplete
 C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.frmapp.resources
 C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.frmInicio.resources
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\DnsClient.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Bson.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Driver.Core.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Driver.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\System.Buffers.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\DnsClient.xml
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Bson.xml
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Driver.xml
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Driver.Core.xml
+C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.frmnuevosocio.resources

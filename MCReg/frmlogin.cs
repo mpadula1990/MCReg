@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace MCReg
 {
     public partial class frmlogin : Form
@@ -98,8 +99,25 @@ namespace MCReg
         private void btnlogin_Click(object sender, EventArgs e)
         {
             frmapp frm = new frmapp();
-            frm.Show();
-            this.Hide();
+            actions log = new actions();
+
+            int respuesta = log.Login(txtuser.Text, txtpass.Text);
+            switch (respuesta)
+            {
+                case 0:
+                    lblerror.Text = "Error de conexion, intente nuevamente o contacte con el administrador.";
+                    break;
+                case 1:
+                    //busco el usuario con el id del txtusuario
+                    //enviar datos del usuario al otro formulario
+                    frm.Show();
+                    this.Hide();
+                    break;
+                case 2:
+                    lblerror.Text = "Autentificacion fallida, error de usuario o contraseña.";
+                    break;
+            }
+
 
         }
     }
