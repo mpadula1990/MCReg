@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="actions.cs" />
+    <Compile Include="classapp.cs" />
     <Compile Include="frmapp.cs">
       <SubType>Form</SubType>
     </Compile>

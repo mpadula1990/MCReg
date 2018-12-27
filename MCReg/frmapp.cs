@@ -89,11 +89,17 @@ namespace MCReg
         private void frmapp_Load(object sender, EventArgs e)
         {
             abrirForm(new frmInicio());
+            label2.Text = Classapp.usuario;
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             abrirForm(new frmnuevosocio());
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

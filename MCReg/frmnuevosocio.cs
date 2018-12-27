@@ -15,22 +15,31 @@ namespace MCReg
     public partial class frmnuevosocio : Form
     {
         public pacientes pacientesdata { get; set; }
+        public solicitud solicitudesdata { get; set; }
         public actions ejecutar = new actions();
 
         public frmnuevosocio()
         {
             InitializeComponent();
             pacientesdata = new pacientes();
-
+            solicitudesdata = new solicitud();
         }
 
         private void frmnuevosocio_Load(object sender, EventArgs e)
         {
+
             //cargo labels de fechas y horas
             lblfecha.Text = DateTime.Now.ToLongDateString();
+            lbld2.Text = DateTime.Now.ToLongDateString();
+            lbld3.Text = DateTime.Now.ToLongDateString();
+            lbld4.Text = DateTime.Now.ToLongDateString();
             //cargo datagrids
             dataGridView1.DataSource = ejecutar.ObtenerPacientes();
-
+            //verifs
+            if (txtauorizacion.Text == "")
+            {
+                btneliminar.Enabled = false;
+            }
 
         }
 
@@ -124,7 +133,49 @@ namespace MCReg
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
+            
+            //Tenemos 3 casos, caso que no halla ninguna autorizacion, caso que sea generica, y caso que no lo sea.
+            aut autdata = ejecutar.obtenerporid(txtauorizacion.Text);
+            var tiempoahora = DateTime.UtcNow;
+            var keyeliminar = gridEliminar.CurrentRow.Cells[0].Value.ToString();
+            string tipoaut = autdata.tipo;
+            DateTime auttiempo = ejecutar.Cadenafecha(autdata.tiempo);
 
+
+
+
+            if (autdata != null)
+            {
+
+                if (autdata.tipo == "generica")
+                {
+                    //cuando es generica solo comprovamos que este activa y que pertenezca al usuario.
+                    if(autdata.usuario == autdata.usuario_destino && autdata.usuario_destino == Classapp.usuario && autdata.estado == true)
+                    {
+                        ejecutar.Eliminarpaciente(keyeliminar);//eliminamos con la key eliminar, este usuario tiene permiso de borrar cualquier paciente.
+                        gridEliminar.DataSource = null;
+                        lblinfo.ForeColor = Color.Green;
+                        lblinfo.Text = "Paciente eliminado";
+                    }
+                }
+                else if(auttiempo < tiempoahora && keyeliminar == autdata.llave && autdata.usuario_destino== Classapp.usuario)
+                {
+                    //en este caso la autorizacion no es generica, por lo tanto es una aut proporcionada por otro usuario. Hacemos las comprovaciones.
+                    //no puede estar caducada, debe coinsidir la llave, el usuario logeado con el usuario destino
+                    
+                    ejecutar.Eliminarpaciente(keyeliminar);
+                    gridEliminar.DataSource = null;
+                    lblinfo.ForeColor = Color.Green;
+                    lblinfo.Text = "Paciente eliminado";
+
+                }
+                else
+                {
+                    lblinfo.ForeColor = Color.Red;
+                    lblinfo.Text = "Autorizacion rechazada o caducada, contacte al administrador o solicite otra autorizacion";
+                }
+
+            }
         }
 
         private void btnexportar_Click(object sender, EventArgs e)
@@ -132,6 +183,61 @@ namespace MCReg
             /*VAMOS A EXPORTAR 3 VIAS, 
              UN PDF,
              UN HTML Y UN ARCHIVO JSON CON LOS DATOS, ESTE DESDE EL PANEL DE ADMINISTRACION SE PUEDE USAR PARA RESTABLECER UN USUARIO ELIMINADO O DADO DE BAJA*/
+        }
+
+        private void btnbusqueda_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ejecutar.pacientesdoclist(txtbusqueda.Text);
+
+        }
+
+        private void btnbuseli_Click(object sender, EventArgs e)
+        {
+            gridEliminar.DataSource = ejecutar.pacientesdoclist(txtbuseli.Text);
+        }
+
+        private void btnsolicitud_Click(object sender, EventArgs e)
+        {
+            solicitudesdata.comentario = txtsolicitud.Text;
+            solicitudesdata.usuario = Classapp.usuario;
+            solicitudesdata.estado = true;
+            /*FECHA investigar y probar, de lo contrario hay que formatear y enviar con un metodo*/
+            //solicitudesdata.fecha_hora = 
+            solicitudesdata.fecha_hora = DateTime.UtcNow.ToString();
+            /*ACA IGUALO LA LLAVE AL ID SELECCIONADO EN EL DATAGRID
+             * solicitudesdata.llave = */
+            solicitudesdata.llave = gridEliminar.CurrentRow.Cells[0].Value.ToString();
+            //LO SUBO A LA BASE DE DATOS
+            ejecutar.enviarsolicitud(solicitudesdata);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GridAut.DataSource = ejecutar.Obteneraut(Classapp.usuario);
+        }
+
+        private void btncargaraut_Click(object sender, EventArgs e)
+        {
+            //gridEliminar.CurrentRow.Cells[0].Value.ToString();
+            //int index = GridAut.CurrentCell.RowIndex;
+            try
+            {
+                txtauorizacion.Text = GridAut.CurrentRow.Cells[0].Value.ToString();
+            }
+            catch (Exception)
+            {
+                lblinfo.Text = "No hay autorizaciones para cargar...";
+            }
+
+
+        }
+
+        private void txtauorizacion_TextChanged(object sender, EventArgs e)
+        {
+            if (txtauorizacion.Text != "")
+            {
+                btneliminar.Enabled = true;
+            }
         }
     }
 }

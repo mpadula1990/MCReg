@@ -12,11 +12,14 @@ using System.Runtime.InteropServices;
 
 namespace MCReg
 {
+    
     public partial class frmlogin : Form
     {
+        
         public frmlogin()
         {
             InitializeComponent();
+            
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -110,6 +113,7 @@ namespace MCReg
                 case 1:
                     //busco el usuario con el id del txtusuario
                     //enviar datos del usuario al otro formulario
+                    Classapp.usuario = txtuser.Text;
                     frm.Show();
                     this.Hide();
                     break;

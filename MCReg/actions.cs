@@ -60,6 +60,11 @@ namespace MCReg
                 return 0;
             }
         }
+        public usuarios logeado(string usuario)
+        {
+            var db = cliente.GetDatabase("MCReg");
+            return db.GetCollection<usuarios>("usuarios").Find(p => p.usuario == usuario).SingleOrDefault();
+        }
 
         public bool Insertarpaciente(pacientes nuevo)
         {
@@ -105,5 +110,52 @@ namespace MCReg
             var db = cliente.GetDatabase("MCReg");
             return db.GetCollection<pacientes>("pacientes").Find(p => p.documento == doc).SingleOrDefault();
         }
+        public List<pacientes> pacientesdoclist(string doc)
+        {
+            var db = cliente.GetDatabase("MCReg");
+            return db.GetCollection<pacientes>("pacientes").Find(p => p.documento == doc).ToList();
+        }
+
+
+        public List<aut> Obteneraut(string user)
+        {
+            var db = cliente.GetDatabase("MCReg");
+            return db.GetCollection<aut>("aut").Find(p => p.usuario_destino == user).ToList();
+        }
+        public aut obtenerporid(string id)
+        {
+            var __id = new ObjectId(id);
+            var db = cliente.GetDatabase("MCReg");
+            return db.GetCollection<aut>("aut").Find(p => p._id == __id).SingleOrDefault();
+        }
+        public bool enviarsolicitud(solicitud nueva)
+        {
+            try
+            {
+                var db = cliente.GetDatabase("MCReg");
+                db.GetCollection<solicitud>("solicitud").InsertOne(nueva);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public DateTime Cadenafecha(string cadenatiempo)
+        {
+            if(cadenatiempo != "")
+            {
+                return DateTime.Parse(cadenatiempo);
+            }else
+            {
+                return DateTime.MinValue;
+            }
+        
+        }
+
+            
+           
+
     }
 }

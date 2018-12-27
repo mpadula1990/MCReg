@@ -51,6 +51,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbld2 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -74,35 +76,41 @@
             this.btnmodificar = new System.Windows.Forms.Button();
             this.btnmcancelar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.lblinfo = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbld3 = new System.Windows.Forms.Label();
+            this.btncargaraut = new System.Windows.Forms.Button();
+            this.GridAut = new System.Windows.Forms.DataGridView();
+            this.btnsolicitud = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtsolicitud = new System.Windows.Forms.TextBox();
+            this.txtauorizacion = new System.Windows.Forms.TextBox();
             this.btnexportar = new System.Windows.Forms.Button();
             this.btneliminar = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtbuseli = new System.Windows.Forms.TextBox();
+            this.btnbuseli = new System.Windows.Forms.Button();
+            this.gridEliminar = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lbld4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnmtodo = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.txtbusqueda = new System.Windows.Forms.TextBox();
             this.btnbusqueda = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridAut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEliminar)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,7 +128,7 @@
             this.btncancelar.Location = new System.Drawing.Point(583, 357);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(95, 38);
-            this.btncancelar.TabIndex = 1;
+            this.btncancelar.TabIndex = 8;
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.UseVisualStyleBackColor = true;
             // 
@@ -129,7 +137,7 @@
             this.btnguardar.Location = new System.Drawing.Point(482, 357);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(95, 38);
-            this.btnguardar.TabIndex = 2;
+            this.btnguardar.TabIndex = 7;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
@@ -140,7 +148,7 @@
             this.txtdoc.Location = new System.Drawing.Point(113, 58);
             this.txtdoc.Name = "txtdoc";
             this.txtdoc.Size = new System.Drawing.Size(264, 27);
-            this.txtdoc.TabIndex = 3;
+            this.txtdoc.TabIndex = 0;
             // 
             // txtmov
             // 
@@ -148,7 +156,7 @@
             this.txtmov.Location = new System.Drawing.Point(113, 256);
             this.txtmov.Name = "txtmov";
             this.txtmov.Size = new System.Drawing.Size(264, 27);
-            this.txtmov.TabIndex = 4;
+            this.txtmov.TabIndex = 6;
             // 
             // txttel
             // 
@@ -164,7 +172,7 @@
             this.txtdir.Location = new System.Drawing.Point(113, 190);
             this.txtdir.Name = "txtdir";
             this.txtdir.Size = new System.Drawing.Size(264, 27);
-            this.txtdir.TabIndex = 6;
+            this.txtdir.TabIndex = 4;
             // 
             // txtemail
             // 
@@ -172,7 +180,7 @@
             this.txtemail.Location = new System.Drawing.Point(113, 157);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(264, 27);
-            this.txtemail.TabIndex = 7;
+            this.txtemail.TabIndex = 3;
             // 
             // txtape
             // 
@@ -180,7 +188,7 @@
             this.txtape.Location = new System.Drawing.Point(113, 124);
             this.txtape.Name = "txtape";
             this.txtape.Size = new System.Drawing.Size(264, 27);
-            this.txtape.TabIndex = 8;
+            this.txtape.TabIndex = 2;
             // 
             // txtnom
             // 
@@ -188,7 +196,7 @@
             this.txtnom.Location = new System.Drawing.Point(113, 91);
             this.txtnom.Name = "txtnom";
             this.txtnom.Size = new System.Drawing.Size(264, 27);
-            this.txtnom.TabIndex = 9;
+            this.txtnom.TabIndex = 1;
             // 
             // label2
             // 
@@ -273,7 +281,7 @@
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblfecha.Location = new System.Drawing.Point(396, 369);
+            this.lblfecha.Location = new System.Drawing.Point(281, 369);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(0, 15);
             this.lblfecha.TabIndex = 18;
@@ -334,6 +342,8 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.dateTimePicker1);
+            this.tabPage2.Controls.Add(this.lbld2);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.lblid);
             this.tabPage2.Controls.Add(this.label20);
@@ -362,6 +372,23 @@
             this.tabPage2.Size = new System.Drawing.Size(687, 401);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(385, 62);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 36;
+            // 
+            // lbld2
+            // 
+            this.lbld2.AutoSize = true;
+            this.lbld2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbld2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbld2.Location = new System.Drawing.Point(491, 101);
+            this.lbld2.Name = "lbld2";
+            this.lbld2.Size = new System.Drawing.Size(0, 15);
+            this.lbld2.TabIndex = 21;
             // 
             // label21
             // 
@@ -438,7 +465,7 @@
             this.txtdocm.Location = new System.Drawing.Point(99, 95);
             this.txtdocm.Name = "txtdocm";
             this.txtdocm.Size = new System.Drawing.Size(264, 27);
-            this.txtdocm.TabIndex = 18;
+            this.txtdocm.TabIndex = 9;
             // 
             // label14
             // 
@@ -457,7 +484,7 @@
             this.txtmovilm.Location = new System.Drawing.Point(99, 293);
             this.txtmovilm.Name = "txtmovilm";
             this.txtmovilm.Size = new System.Drawing.Size(264, 27);
-            this.txtmovilm.TabIndex = 19;
+            this.txtmovilm.TabIndex = 16;
             // 
             // label15
             // 
@@ -476,7 +503,7 @@
             this.txttelm.Location = new System.Drawing.Point(99, 260);
             this.txttelm.Name = "txttelm";
             this.txttelm.Size = new System.Drawing.Size(264, 27);
-            this.txttelm.TabIndex = 20;
+            this.txttelm.TabIndex = 15;
             // 
             // label16
             // 
@@ -495,7 +522,7 @@
             this.txtdirem.Location = new System.Drawing.Point(99, 227);
             this.txtdirem.Name = "txtdirem";
             this.txtdirem.Size = new System.Drawing.Size(264, 27);
-            this.txtdirem.TabIndex = 21;
+            this.txtdirem.TabIndex = 14;
             // 
             // label17
             // 
@@ -514,7 +541,7 @@
             this.txtemailm.Location = new System.Drawing.Point(99, 194);
             this.txtemailm.Name = "txtemailm";
             this.txtemailm.Size = new System.Drawing.Size(264, 27);
-            this.txtemailm.TabIndex = 22;
+            this.txtemailm.TabIndex = 13;
             // 
             // label18
             // 
@@ -533,7 +560,7 @@
             this.txtapellidom.Location = new System.Drawing.Point(99, 161);
             this.txtapellidom.Name = "txtapellidom";
             this.txtapellidom.Size = new System.Drawing.Size(264, 27);
-            this.txtapellidom.TabIndex = 23;
+            this.txtapellidom.TabIndex = 12;
             // 
             // txtnombrem
             // 
@@ -542,14 +569,14 @@
             this.txtnombrem.Location = new System.Drawing.Point(99, 128);
             this.txtnombrem.Name = "txtnombrem";
             this.txtnombrem.Size = new System.Drawing.Size(264, 27);
-            this.txtnombrem.TabIndex = 24;
+            this.txtnombrem.TabIndex = 11;
             // 
             // btnmbuscar
             // 
             this.btnmbuscar.Location = new System.Drawing.Point(369, 95);
             this.btnmbuscar.Name = "btnmbuscar";
             this.btnmbuscar.Size = new System.Drawing.Size(88, 27);
-            this.btnmbuscar.TabIndex = 4;
+            this.btnmbuscar.TabIndex = 10;
             this.btnmbuscar.Text = "Buscar";
             this.btnmbuscar.UseVisualStyleBackColor = true;
             this.btnmbuscar.Click += new System.EventHandler(this.btnmbuscar_Click);
@@ -559,7 +586,7 @@
             this.btnmodificar.Location = new System.Drawing.Point(525, 372);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.Size = new System.Drawing.Size(75, 23);
-            this.btnmodificar.TabIndex = 3;
+            this.btnmodificar.TabIndex = 17;
             this.btnmodificar.Text = "Modificar";
             this.btnmodificar.UseVisualStyleBackColor = true;
             this.btnmodificar.Click += new System.EventHandler(this.btnmodificar_Click);
@@ -569,27 +596,30 @@
             this.btnmcancelar.Location = new System.Drawing.Point(606, 372);
             this.btnmcancelar.Name = "btnmcancelar";
             this.btnmcancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnmcancelar.TabIndex = 2;
+            this.btnmcancelar.TabIndex = 18;
             this.btnmcancelar.Text = "Cancelar";
             this.btnmcancelar.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Controls.Add(this.button6);
-            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPage3.Controls.Add(this.lblinfo);
             this.tabPage3.Controls.Add(this.button1);
+            this.tabPage3.Controls.Add(this.lbld3);
+            this.tabPage3.Controls.Add(this.btncargaraut);
+            this.tabPage3.Controls.Add(this.GridAut);
+            this.tabPage3.Controls.Add(this.btnsolicitud);
             this.tabPage3.Controls.Add(this.label25);
             this.tabPage3.Controls.Add(this.label24);
-            this.tabPage3.Controls.Add(this.textBox1);
-            this.tabPage3.Controls.Add(this.button5);
-            this.tabPage3.Controls.Add(this.textBox3);
+            this.tabPage3.Controls.Add(this.txtsolicitud);
+            this.tabPage3.Controls.Add(this.txtauorizacion);
             this.tabPage3.Controls.Add(this.btnexportar);
             this.tabPage3.Controls.Add(this.btneliminar);
             this.tabPage3.Controls.Add(this.label23);
-            this.tabPage3.Controls.Add(this.textBox2);
-            this.tabPage3.Controls.Add(this.button2);
-            this.tabPage3.Controls.Add(this.dataGridView2);
+            this.tabPage3.Controls.Add(this.txtbuseli);
+            this.tabPage3.Controls.Add(this.btnbuseli);
+            this.tabPage3.Controls.Add(this.gridEliminar);
             this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -597,37 +627,68 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Eliminar (admin req)";
             // 
-            // button6
+            // lblinfo
             // 
-            this.button6.Location = new System.Drawing.Point(26, 218);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(289, 41);
-            this.button6.TabIndex = 48;
-            this.button6.Text = "CARGAR AUTORIZACION";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(26, 68);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(289, 144);
-            this.dataGridView3.TabIndex = 47;
+            this.lblinfo.AutoSize = true;
+            this.lblinfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinfo.Location = new System.Drawing.Point(346, 256);
+            this.lblinfo.Name = "lblinfo";
+            this.lblinfo.Size = new System.Drawing.Size(0, 17);
+            this.lblinfo.TabIndex = 50;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(26, 353);
+            this.button1.Location = new System.Drawing.Point(213, 185);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(289, 41);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "ENVIAR SOLICITUD";
+            this.button1.Size = new System.Drawing.Size(102, 41);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "ACTUALIZAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lbld3
+            // 
+            this.lbld3.AutoSize = true;
+            this.lbld3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbld3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbld3.Location = new System.Drawing.Point(23, 366);
+            this.lbld3.Name = "lbld3";
+            this.lbld3.Size = new System.Drawing.Size(0, 15);
+            this.lbld3.TabIndex = 21;
+            // 
+            // btncargaraut
+            // 
+            this.btncargaraut.Location = new System.Drawing.Point(26, 185);
+            this.btncargaraut.Name = "btncargaraut";
+            this.btncargaraut.Size = new System.Drawing.Size(181, 41);
+            this.btncargaraut.TabIndex = 48;
+            this.btncargaraut.Text = "CARGAR AUTORIZACION";
+            this.btncargaraut.UseVisualStyleBackColor = true;
+            this.btncargaraut.Click += new System.EventHandler(this.btncargaraut_Click);
+            // 
+            // GridAut
+            // 
+            this.GridAut.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridAut.Location = new System.Drawing.Point(26, 68);
+            this.GridAut.Name = "GridAut";
+            this.GridAut.Size = new System.Drawing.Size(289, 111);
+            this.GridAut.TabIndex = 47;
+            // 
+            // btnsolicitud
+            // 
+            this.btnsolicitud.Location = new System.Drawing.Point(29, 353);
+            this.btnsolicitud.Name = "btnsolicitud";
+            this.btnsolicitud.Size = new System.Drawing.Size(286, 41);
+            this.btnsolicitud.TabIndex = 46;
+            this.btnsolicitud.Text = "ENVIAR SOLICITUD";
+            this.btnsolicitud.UseVisualStyleBackColor = true;
+            this.btnsolicitud.Click += new System.EventHandler(this.btnsolicitud_Click);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(23, 15);
+            this.label25.Location = new System.Drawing.Point(23, 20);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(89, 17);
             this.label25.TabIndex = 45;
@@ -643,34 +704,27 @@
             this.label24.TabIndex = 44;
             this.label24.Text = "Autorizaciones";
             // 
-            // textBox1
+            // txtsolicitud
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 279);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 68);
-            this.textBox1.TabIndex = 43;
+            this.txtsolicitud.Location = new System.Drawing.Point(26, 232);
+            this.txtsolicitud.Multiline = true;
+            this.txtsolicitud.Name = "txtsolicitud";
+            this.txtsolicitud.Size = new System.Drawing.Size(289, 115);
+            this.txtsolicitud.TabIndex = 43;
             // 
-            // button5
+            // txtauorizacion
             // 
-            this.button5.Location = new System.Drawing.Point(254, 15);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(61, 22);
-            this.button5.TabIndex = 42;
-            this.button5.Text = "Cargar";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(118, 15);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(130, 20);
-            this.textBox3.TabIndex = 41;
+            this.txtauorizacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtauorizacion.Location = new System.Drawing.Point(118, 15);
+            this.txtauorizacion.Name = "txtauorizacion";
+            this.txtauorizacion.Size = new System.Drawing.Size(197, 27);
+            this.txtauorizacion.TabIndex = 41;
+            this.txtauorizacion.UseSystemPasswordChar = true;
+            this.txtauorizacion.TextChanged += new System.EventHandler(this.txtauorizacion_TextChanged);
             // 
             // btnexportar
             // 
-            this.btnexportar.Location = new System.Drawing.Point(529, 353);
+            this.btnexportar.Location = new System.Drawing.Point(528, 185);
             this.btnexportar.Name = "btnexportar";
             this.btnexportar.Size = new System.Drawing.Size(130, 41);
             this.btnexportar.TabIndex = 39;
@@ -680,9 +734,9 @@
             // 
             // btneliminar
             // 
-            this.btneliminar.Location = new System.Drawing.Point(388, 353);
+            this.btneliminar.Location = new System.Drawing.Point(349, 185);
             this.btneliminar.Name = "btneliminar";
-            this.btneliminar.Size = new System.Drawing.Size(130, 41);
+            this.btneliminar.Size = new System.Drawing.Size(173, 41);
             this.btneliminar.TabIndex = 33;
             this.btneliminar.Text = "Eliminar";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -692,36 +746,37 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(385, 15);
+            this.label23.Location = new System.Drawing.Point(346, 19);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(86, 17);
             this.label23.TabIndex = 32;
             this.label23.Text = "Documento";
             // 
-            // textBox2
+            // txtbuseli
             // 
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(477, 10);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(128, 27);
-            this.textBox2.TabIndex = 31;
+            this.txtbuseli.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbuseli.Location = new System.Drawing.Point(438, 14);
+            this.txtbuseli.Name = "txtbuseli";
+            this.txtbuseli.Size = new System.Drawing.Size(166, 27);
+            this.txtbuseli.TabIndex = 31;
             // 
-            // button2
+            // btnbuseli
             // 
-            this.button2.Location = new System.Drawing.Point(611, 10);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 27);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnbuseli.Location = new System.Drawing.Point(610, 14);
+            this.btnbuseli.Name = "btnbuseli";
+            this.btnbuseli.Size = new System.Drawing.Size(48, 27);
+            this.btnbuseli.TabIndex = 30;
+            this.btnbuseli.Text = "Buscar";
+            this.btnbuseli.UseVisualStyleBackColor = true;
+            this.btnbuseli.Click += new System.EventHandler(this.btnbuseli_Click);
             // 
-            // dataGridView2
+            // gridEliminar
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(388, 48);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(271, 299);
-            this.dataGridView2.TabIndex = 29;
+            this.gridEliminar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridEliminar.Location = new System.Drawing.Point(349, 68);
+            this.gridEliminar.Name = "gridEliminar";
+            this.gridEliminar.Size = new System.Drawing.Size(309, 111);
+            this.gridEliminar.TabIndex = 29;
             // 
             // label19
             // 
@@ -736,6 +791,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Controls.Add(this.lbld4);
             this.tabPage4.Controls.Add(this.dataGridView1);
             this.tabPage4.Controls.Add(this.btnmtodo);
             this.tabPage4.Controls.Add(this.label22);
@@ -746,6 +802,16 @@
             this.tabPage4.Size = new System.Drawing.Size(687, 401);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Buscar";
+            // 
+            // lbld4
+            // 
+            this.lbld4.AutoSize = true;
+            this.lbld4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbld4.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.lbld4.Location = new System.Drawing.Point(464, 23);
+            this.lbld4.Name = "lbld4";
+            this.lbld4.Size = new System.Drawing.Size(0, 15);
+            this.lbld4.TabIndex = 21;
             // 
             // dataGridView1
             // 
@@ -758,7 +824,7 @@
             // 
             // btnmtodo
             // 
-            this.btnmtodo.Location = new System.Drawing.Point(460, 14);
+            this.btnmtodo.Location = new System.Drawing.Point(370, 14);
             this.btnmtodo.Name = "btnmtodo";
             this.btnmtodo.Size = new System.Drawing.Size(88, 27);
             this.btnmtodo.TabIndex = 29;
@@ -781,23 +847,39 @@
             this.txtbusqueda.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbusqueda.Location = new System.Drawing.Point(96, 14);
             this.txtbusqueda.Name = "txtbusqueda";
-            this.txtbusqueda.Size = new System.Drawing.Size(264, 27);
+            this.txtbusqueda.Size = new System.Drawing.Size(174, 27);
             this.txtbusqueda.TabIndex = 27;
             // 
             // btnbusqueda
             // 
-            this.btnbusqueda.Location = new System.Drawing.Point(366, 14);
+            this.btnbusqueda.Location = new System.Drawing.Point(276, 14);
             this.btnbusqueda.Name = "btnbusqueda";
             this.btnbusqueda.Size = new System.Drawing.Size(88, 27);
             this.btnbusqueda.TabIndex = 26;
             this.btnbusqueda.Text = "Buscar";
             this.btnbusqueda.UseVisualStyleBackColor = true;
+            this.btnbusqueda.Click += new System.EventHandler(this.btnbusqueda_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(13, 48);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(41, 13);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "label26";
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
             // 
             // frmnuevosocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblerr);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -811,11 +893,12 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridAut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridEliminar)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -874,21 +957,28 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtbusqueda;
         private System.Windows.Forms.Button btnbusqueda;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtauorizacion;
         private System.Windows.Forms.Button btnexportar;
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtbuseli;
+        private System.Windows.Forms.Button btnbuseli;
+        private System.Windows.Forms.DataGridView gridEliminar;
         private System.Windows.Forms.Button btnmtodo;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnsolicitud;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.TextBox txtsolicitud;
+        private System.Windows.Forms.Button btncargaraut;
+        private System.Windows.Forms.DataGridView GridAut;
+        private System.Windows.Forms.Label lbld2;
+        private System.Windows.Forms.Label lbld3;
+        private System.Windows.Forms.Label lbld4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button button1;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Label lblinfo;
     }
 }

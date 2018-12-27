@@ -24,3 +24,5 @@ C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Bson.xml
 C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Driver.xml
 C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\MongoDB.Driver.Core.xml
 C:\Users\Mathias\source\repos\MCReg\MCReg\obj\Debug\MCReg.frmnuevosocio.resources
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\itextsharp.dll
+C:\Users\Mathias\source\repos\MCReg\MCReg\bin\Debug\itextsharp.xml
