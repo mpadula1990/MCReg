@@ -222,6 +222,7 @@ namespace MCReg
             //int index = GridAut.CurrentCell.RowIndex;
             try
             {
+                txtauorizacion.Text = "";
                 txtauorizacion.Text = GridAut.CurrentRow.Cells[0].Value.ToString();
             }
             catch (Exception)
@@ -232,11 +233,37 @@ namespace MCReg
 
         }
 
-        private void txtauorizacion_TextChanged(object sender, EventArgs e)
+
+
+        private void txtauorizacion_Validating(object sender, CancelEventArgs e)
         {
-            if (txtauorizacion.Text != "")
+            char[] allowedChars = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'c', 'd', 'e', 'f' };
+
+            foreach (char character in txtauorizacion.Text.ToArray())
+            {
+                if (!allowedChars.Contains(character))
+                {
+                    lblinfo.Text = "Autorizacion: Formato invalido";
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void tmrealtime_Tick(object sender, EventArgs e)
+        {
+            try { 
+            if (txtauorizacion.Text != "" && gridEliminar.CurrentRow.Cells[0].Value.ToString() != null)
             {
                 btneliminar.Enabled = true;
+            }
+            else
+            {
+                btneliminar.Enabled = false;
+            }
+            }
+            catch (Exception)
+            {
+                btneliminar.Enabled = false;
             }
         }
     }

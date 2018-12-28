@@ -11,4 +11,8 @@ namespace MCReg
        public static string usuario;
         
     }
+    public class App
+    {
+
+    }
 }

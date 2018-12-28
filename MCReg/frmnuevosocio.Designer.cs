@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
@@ -102,6 +103,7 @@
             this.btnbusqueda = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.tmrealtime = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -716,11 +718,12 @@
             // 
             this.txtauorizacion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtauorizacion.Location = new System.Drawing.Point(118, 15);
+            this.txtauorizacion.MaxLength = 24;
             this.txtauorizacion.Name = "txtauorizacion";
             this.txtauorizacion.Size = new System.Drawing.Size(197, 27);
             this.txtauorizacion.TabIndex = 41;
             this.txtauorizacion.UseSystemPasswordChar = true;
-            this.txtauorizacion.TextChanged += new System.EventHandler(this.txtauorizacion_TextChanged);
+            this.txtauorizacion.Validating += new System.ComponentModel.CancelEventHandler(this.txtauorizacion_Validating);
             // 
             // btnexportar
             // 
@@ -874,6 +877,11 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // tmrealtime
+            // 
+            this.tmrealtime.Enabled = true;
+            this.tmrealtime.Tick += new System.EventHandler(this.tmrealtime_Tick);
+            // 
             // frmnuevosocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -980,5 +988,6 @@
         private System.Windows.Forms.Button button1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Label lblinfo;
+        private System.Windows.Forms.Timer tmrealtime;
     }
 }
